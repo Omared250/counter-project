@@ -46,6 +46,14 @@ plusCounter.addEventListener('click', () => {
     numberCounter.textContent++
 })
 
+// reset counter
+const resetButton = document.createElement('button')
+resetButton.textContent = 'RESET'
+resetButton.addEventListener('click', () => {
+    numberCounter.textContent = 0;
+})
+resetButton.classList.add('reset-button');
+
 // append counter elements to its father container
 counterContainer.appendChild(lessCounter);
 counterContainer.appendChild(numberCounter);
@@ -55,6 +63,7 @@ counterContainer.appendChild(plusCounter);
 mainContainer.appendChild(counterTitle);
 mainContainer.appendChild(paragraph);
 mainContainer.appendChild(counterContainer);
+mainContainer.appendChild(resetButton);
 
 // append to the root
 rootElement.appendChild(mainContainer);
